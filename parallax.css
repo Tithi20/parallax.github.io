@@ -1,0 +1,419 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(image.jpg);
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#navbar {
+  background-color: transparent;
+  color: white;
+  height: 60px;
+
+  /* width: 100%; */
+}
+nav ul {
+  float: right;
+  margin-right: 20px;
+  text-decoration: none;
+  list-style: none;
+}
+
+nav h1 {
+  font-size: xx-large;
+  font-family: "Luxurious Roman", cursive;
+  font-weight: 100;
+  padding: 10px;
+}
+nav ul a {
+  display: inline-block;
+  line-height: 0%;
+  margin: 0 5px;
+}
+.heading {
+  font-weight: 100;
+  font-size: large;
+  font-family: "Courier New", Courier, monospace;
+  padding: 10px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+.heading:visited {
+  color: antiquewhite;
+  text-decoration: none;
+}
+.heading:hover {
+  cursor: pointer;
+  color: rgb(148, 148, 201);
+  padding: 20px;
+  /* width: 80%; */
+}
+
+.cursive {
+  font-family: "Roboto Mono", monospace;
+  font-size: xx-large;
+  font-weight: 600;
+}
+
+label {
+  float: right;
+  margin: 0 5px;
+  padding: 10px;
+  display: none;
+}
+#toggle {
+  float: right;
+
+  /* padding: 10px; */
+  height: 50px;
+  display: none;
+  cursor: pointer;
+}
+
+#container {
+  background-color: transparent;
+  color: white;
+  margin: 30px;
+  padding: 10px;
+  height: 80vh;
+  /* text-align: center; */
+  position: relative;
+}
+#container #alignment {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding-bottom: 60px;
+  line-height: 60px;
+  padding-left: 20px;
+}
+#alignment {
+  animation-name: fadding;
+  animation-duration: 4s;
+}
+#line1 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 35px;
+  font-weight: bolder;
+  animation-name: line1;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+#line2 {
+  font-family: "Sedgwick Ave", cursive;
+  font-size: 50px;
+  font-weight: bolder;
+  animation-name: line2;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+#contain {
+  background-color: white;
+  height: 100vh;
+  background-image: url("https://wallpapercave.com/wp/lwfQm84.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#alignment-div {
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  margin-bottom: 140px;
+  padding-bottom: 60px;
+  padding-right: 2px;
+  line-height: 20px;
+  margin-top: 10px;
+}
+.container {
+  /* border: 2px solid black; */
+  margin-left: 380px;
+  margin-right: 10px;
+}
+
+/*div 2*/
+.grid {
+  display: block;
+  padding: 16px;
+}
+.col {
+  background-color: rgba(243, 242, 242, 0.6);
+  border-radius: 5px;
+  margin-bottom: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 8px 0 rgba(29, 28, 28, 0.7),
+    0 6px 20px 0 rgba(17, 16, 16, 0.7);
+}
+#img_style {
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* padding-bottom: 5px; */
+  box-shadow: 5px 5px 5px rgb(59, 56, 56);
+}
+#contain h1 {
+  color: #aa7baa;
+  /* color: whitesmoke; */
+  text-align: left;
+  padding: 20px;
+  font-family: "Lucida Sans Typewriter", "Lucida Console", monaco,
+    "Bitstream Vera Sans Mono", monospace;
+  font-weight: 100;
+  /* font-family: "Merriweather", serif; */
+  font-size: 35px;
+  letter-spacing: 2px;
+  padding-top: 70px;
+}
+
+/*2nd div description*/
+
+.desc_heading {
+  font-size: 23px;
+  padding: 10px 0;
+}
+.desc {
+  padding: 4px 0;
+  font-family: "PT Serif", serif;
+  font-size: 16px;
+}
+.desc_footer {
+  padding: 10px 0;
+}
+.desc_link {
+  color: red;
+  text-decoration: none;
+}
+.desc_link:visited {
+  color: #7a1ee4;
+}
+.desc_link:hover {
+  color: rgb(47, 100, 124);
+}
+
+@media only screen and (min-width: 648px) {
+  .grid {
+    grid-gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .grid {
+    grid-gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .grid {
+    grid-gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* media query */
+@media only screen and (max-width: 726px) {
+  label {
+    display: block;
+    cursor: pointer;
+  }
+  #menu a {
+    text-align: center;
+    width: 100%;
+  }
+  #menu {
+    display: none;
+    background-color: white;
+    color: black;
+    width: 100%;
+    margin: 0;
+    border-radius: 5px;
+  }
+  #toggle:checked + #menu {
+    display: block;
+  }
+  #contain {
+    height: 330vh;
+  }
+}
+@media only screen and (max-width: 618px) {
+  #contain {
+    height: 340vh;
+  }
+}
+
+@media only screen and (min-width: 648px) {
+  #contain {
+    height: 210vh;
+  }
+}
+@media only screen and (min-width: 960px) {
+  #contain {
+    height: 170vh;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #contain {
+    height: 120vh;
+  }
+}
+@media only screen and (min-width: 1550px) {
+  #contain {
+    height: 100vh;
+  }
+}
+#btn {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  animation-name: button;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  box-shadow: rgba(228, 219, 219, 0.8) 4px 3px 0px;
+}
+#btn:hover {
+  background-color: white;
+  box-shadow: rgba(228, 219, 219, 0.15) 0px 3px 10px;
+  color: black;
+}
+
+@media only screen and (max-width: 1920px) {
+  #container {
+    margin: 100px;
+  }
+  #line1 {
+    font-family: "Bebas Neue", cursive;
+    font-size: 30px;
+    font-weight: bolder;
+  }
+  #line2 {
+    font-family: "Sedgwick Ave", cursive;
+    font-size: 50px;
+    font-weight: bolder;
+  }
+  #alignment-div {
+    height: 40%;
+    width: 50%;
+
+    padding-top: 20px;
+  }
+}
+
+@media only screen and (min-width: 1550px) {
+  @keyframes line1 {
+    0% {
+      font-size: 35px;
+    }
+    100% {
+      font-size: 30px;
+      padding-bottom: 10px;
+    }
+  }
+
+  @keyframes line2 {
+    0% {
+      font-size: 50px;
+    }
+    100% {
+      font-size: 90px;
+      line-height: 100px;
+      padding-top: 2px;
+    }
+  }
+  @keyframes button {
+    from {
+      padding: 10px;
+    }
+    to {
+      padding: 20px;
+      font-size: 21px;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  #container {
+    margin: 80px;
+  }
+  #line1 {
+    font-family: "Bebas Neue", cursive;
+    font-size: 18px;
+    font-weight: bolder;
+  }
+  #line2 {
+    font-family: "Sedgwick Ave", cursive;
+    font-size: 70px;
+    font-weight: bolder;
+  }
+  #container #alignment {
+    padding-bottom: 120px;
+  }
+  #alignment-div {
+    margin-top: 20px;
+    width: 45%;
+    height: 40%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    padding-top: 10px;
+    margin-left: 200px;
+    margin-bottom: 10px;
+    padding-left: 40px;
+    text-align: left;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #container {
+    margin: 60px;
+  }
+  #line1 {
+    font-family: "Bebas Neue", cursive;
+    font-size: 14px;
+    font-weight: bolder;
+  }
+  #line2 {
+    font-family: "Sedgwick Ave", cursive;
+    font-size: 60px;
+    font-weight: bolder;
+  }
+  #container #alignment {
+    padding-bottom: 240px;
+  }
+  #alignment-div {
+    width: 50%;
+    height: 40%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+
+    margin-bottom: 40px;
+    text-align: left;
+    display: none;
+  }
+}
+
+/*animation*/
+@keyframes fadding {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
